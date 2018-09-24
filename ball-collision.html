@@ -1,0 +1,45 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>小球碰撞</title>
+</head>
+<style>
+* {
+    margin: 0;
+    padding: 0;
+}
+.wrap {
+    width: 800px;
+    height: 600px;
+    border: 1px solid pink;
+    margin: 10px auto 0;
+    position: relative;
+}
+.ball {
+    width: 40px;
+    height: 40px;
+    position: absolute;
+    line-height: 40px;
+    text-align: center;
+    border-radius: 50%;
+    color: #ffffff;
+}
+</style>
+<body>
+    <div class="wrap"></div>
+    <script src="./ball-collision.js"></script>
+    <script>
+        const wrap = document.querySelector('.wrap');
+        const wrapHeight = wrap.clientHeight;
+        const wrapWidth = wrap.clientWidth;
+        const ball = new BallCollision({
+            wrapHeight,
+            wrapWidth
+        })
+        ball.init();
+    </script>
+</body>
+</html>
